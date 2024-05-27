@@ -19,6 +19,7 @@ customerRouter.post("/create", (req, res) => {
     customers.push({
       ...body,
       id,
+      bookings : []
     });
     res.send({ message: "Customer created", customer_details: body });
   } else res.status(400).send({ message: "Invalid payload schema" });
