@@ -25,11 +25,12 @@ const payloadValidation = (arr, payload) => {
   } else return false;
 };
 
-//functin for changing the datatype to boolean from string for query params
+//function for changing the datatype to boolean from string for query params
 const parseBool = (val) => {
   return val === true || val == "true";
 };
 
+//function for checking the vacancy of room
 const checkForVacancy = ({ room_id, date, start_time, end_time },bookings) => {
   // Filter bookings for the specific room
   const booking = bookings.filter((val) => val.room_id == room_id);
